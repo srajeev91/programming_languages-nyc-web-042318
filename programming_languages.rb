@@ -1,14 +1,14 @@
 def reformat_languages(languages)
-  hash = {}
+  my_hash = {}
   
   languages.each do |style, hash|
     
       hash.collect do |language, type_hash|
         if hash.has_key?(language)
-          hash[language][:style] << style
+          my_hash[language][:style] << style
         else
-          hash[language] = type_hash
-          hash[language][:style] = [style]
+          my_hash[language] = type_hash
+          my_hash[language][:style] = [style]
         end
       end
     
