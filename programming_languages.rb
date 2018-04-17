@@ -5,8 +5,10 @@ def reformat_languages(languages)
     
       hash.collect do |language, type_hash|
         if hash.keys.include?(language)
-        hash[language] = type_hash
-        hash[language][:style] = [style]
+          hash[language][:style] << [style]
+        else
+          hash[language]{:style] = style
+        end
       end
     end
   end
