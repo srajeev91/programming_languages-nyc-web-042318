@@ -4,7 +4,7 @@ def reformat_languages(languages)
   languages.each do |style, hash|
     
       hash.collect do |language, type_hash|
-        if hash.keys.include?(language)
+        if hash.keys != nil
           hash[language][:style] << [style]
         else
           hash[language] = type_hash
